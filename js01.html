@@ -5,10 +5,72 @@
     <title>Javascriptの練習</title>
 </head>
 <body>
-  <h1>Javascroptの練習</h1>
+  <h1 id="title">Javascriptの練習</h1>
+  <h2 id="subtitle">はじめてのjs</h2>
   <ul>
       <li>Home</li>
       <li>About</li>
   </ul>
+
+  <button id ="btn">クリック</button><br><br>
+  <button id ="btn2">クリックしてね</button>
+
+    <script>
+
+    //alert('alertのテスト');
+    /*
+    console.log('コンソールのテスト')
+    */
+
+    
+
+    var colorValue;　//変数
+    colorValue = '#FF0000';
+
+    var colorValueG ='#00FF00';
+    var colorValueB ='#0000FF';
+
+    var ttl=document.querySelector('#title');
+    var subttl=document.querySelector('#subtitle');
+
+    console.log(ttl);
+
+    //changeStyle();//関数の実行
+    //イベントがいつ発行されるか聞き耳を立てる
+    //#btnがクリックされたら
+    document.querySelector('#btn').addEventListener('click',changeStyle);
+
+
+    //　関数の設定
+    function changeStyle(aColor){
+    //このファイルのHTMLタグの中のid'title'のCSSの文字色を#FF0000(赤)にしろ
+    ttl.style.color= aColor;
+    ttl.style.backgroundColor =colorValueG;
+    }
+
+    document.querySelector('#btn2').addEventListener('click',changeStyleSubttl);
+
+    function changeStyleSubttl(){
+    subttl.style.color = colorValueB;
+    }
+
+    var numA =10;
+    var numB =20;
+    var resultC =numA+numB;
+    console.log(resultC);
+
+    //文字列
+    var strD='10';
+    var resultE =numA+strD;
+    console.log(resultE);
+
+   //文字列の結合、
+    var myName = 'Kagami'
+    var familyName ='Okamoto'
+    var fullName = myName + familyName;
+    console.log(fullName);
+
+    </script>
+
 </body>
 </html>
